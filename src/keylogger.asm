@@ -39,7 +39,7 @@ _start:
 
         mov     rax, 2                  ; syscall open
         mov     rdi, path_log
-        mov     rsi, 0x441              ; (O_WRONLY = 1, O_CREAT = 0x40, O_APPEND = 0x200)
+        mov     rsi, 0x441              ; (O_WRONLY = 1, O_CREAT = 0x40, O_APPEND = 0x400)
         mov     rdx, 0o644
         syscall
 

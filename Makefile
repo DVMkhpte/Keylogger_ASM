@@ -10,9 +10,11 @@ $(BIN): $(OBJ)
 
 build/%.o: src/%.asm
 	mkdir -p build
+	mkdir -p logs
 	nasm -f elf64 -g -o $@ $<
 
 run:
+	mkdir -p logs
 	./bin/keylogger
 
 clean:
